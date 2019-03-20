@@ -16,6 +16,12 @@
     <link href="/Content/assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="/Content/assets/demo/demo.css" rel="stylesheet" />
+    <style>
+        .main-panel > .content 
+        {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body class="">
     <div class="wrapper ">
@@ -33,19 +39,19 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="nav-item active">
+                    <li class="nav-item active" data-color="green">
                         <a class="nav-link" href="/Dashboard" title="Dashboard">
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item" data-color="danger">
                         <a class="nav-link" href="/Clientes" title="Clientes">
                             <i class="material-icons">business</i>
                             <p>Clientes</p>
                         </a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item" data-color="orange">
                         <a class="nav-link" href="/Portes" title="Portes">
                             <i class="material-icons">list_alt</i>
                             <p>Portes</p>
@@ -55,32 +61,6 @@
             </div>
         </div>
         <div class="main-panel ">
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top">
-                <div class="container-fluid ">
-                    <div class="navbar-wrapper">
-                        <a class="navbar-brand" href="javascript:;">Dashboard</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                        <span class="navbar-toggler-icon icon-bar"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end">
-                        <form class="navbar-form">
-                            <div class="input-group no-border">
-                                <input type="text" value="" class="form-control" placeholder="Busca...">
-                                <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                    <i class="material-icons">search</i>
-                                    <div class="ripple-container"></div>
-                                </button>
-                            </div>
-                        </form>                        
-                    </div>
-                </div>
-            </nav>
-            <!-- End Navbar -->
             <div class="content">
                 @RenderBody()
             </div>
@@ -153,7 +133,7 @@
                         $('.sidebar li.nav-item').removeClass('active');
                         item.addClass('active');
 
-                        $('a.navbar-brand').html(link.attr('title'));
+                        $('.sidebar').attr('data-color', item.attr('data-color'));
                     }
                 });
 
