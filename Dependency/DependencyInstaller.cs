@@ -44,10 +44,8 @@ namespace Dependency
 
                 //All repoistories
                 Classes.FromAssembly(Assembly.GetAssembly(typeof(ClienteRepository))).InSameNamespaceAs<ClienteRepository>().WithService.DefaultInterfaces().LifestyleTransient(),
-                //Classes.FromAssembly(Assembly.GetAssembly(typeof(NhPacienteRepository))).InSameNamespaceAs<NhPacienteRepository>().WithService.DefaultInterfaces().LifestyleTransient(),
 
                 //All services
-                //Classes.FromAssembly(Assembly.GetAssembly(typeof(PessoaService))).InSameNamespaceAs<PessoaService>().WithService.DefaultInterfaces().LifestyleTransient(),
                 Classes.FromAssembly(Assembly.GetAssembly(typeof(ClienteService))).InSameNamespaceAs<ClienteService>().WithService.DefaultInterfaces().LifestyleTransient()
 
             );
