@@ -73,6 +73,8 @@
     <Compile Include="NHibernate\NhBaseRepository.cs" />
     <Compile Include="NHibernate\NhUnityOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Impl\PorteRepository.cs" />
+    <Compile Include="Repositories\IPorteRepository.cs" />
     <Compile Include="Repositories\IClienteRepository.cs" />
     <Compile Include="Repositories\Impl\ClienteRepository.cs" />
     <Compile Include="UnitOfWorkAttribute.cs" />

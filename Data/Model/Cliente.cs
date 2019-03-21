@@ -9,9 +9,9 @@ namespace Data.Model
     public class Cliente : BaseModel<int>
     {   
         public virtual string NomeFantasia { get; set; }
-        public virtual int PorteId { get; protected set; }
+        public virtual int PorteId { get; set; }
         public virtual string RazaoSocial { get; set; }
-        public virtual long Cnpj { get; set; }
+        public virtual long? Cnpj { get; set; }
         public virtual bool Ativo{ get; set; }
 
         public virtual Porte Porte { get; set; }

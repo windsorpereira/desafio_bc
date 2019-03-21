@@ -1,4 +1,4 @@
-﻿using Data.Model;
+﻿using Service.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +11,8 @@ namespace Service
     {
         Cliente Salvar(Cliente cliente);
         IList<Cliente> ObterTodos();
+        Cliente Obter(int Id);
+        void Toggle(int Id);
+        void Remover(int Id);
     }
 }

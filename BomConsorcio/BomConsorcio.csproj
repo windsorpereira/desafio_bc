@@ -230,11 +230,12 @@
     <Content Include="Content\assets\js\plugins\nouislider.min.js" />
     <Content Include="Content\assets\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="Content\assets\js\plugins\sweetalert2.js" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Views\Clientes\Cliente.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -430,10 +431,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{1b28559c-9ebc-47d7-9b9f-3416c70c254f}</Project>
-      <Name>Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Dependency\Dependency.csproj">
       <Project>{f6cdd77b-0483-4c9d-bf6f-8ff3c6bd9662}</Project>
       <Name>Dependency</Name>

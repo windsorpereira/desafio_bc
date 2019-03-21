@@ -50,6 +50,7 @@
       <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
@@ -62,8 +63,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPorteService.cs" />
     <Compile Include="IClienteService.cs" />
+    <Compile Include="Impl\PorteService.cs" />
     <Compile Include="Impl\ClienteService.cs" />
+    <Compile Include="ViewModel\Cliente.cs" />
+    <Compile Include="ViewModel\Dashboard.cs" />
+    <Compile Include="ViewModel\Porte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
