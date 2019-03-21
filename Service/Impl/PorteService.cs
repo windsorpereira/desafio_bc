@@ -20,7 +20,7 @@ namespace Service.Impl
 
         public IList<Porte> ObterTodos()
         {
-            return _porteRepository.ObterTodos().Select(x =>
+            return _porteRepository.ObterTodosSqlCommand().Select(x =>
             {
                 return new Porte(x);
             }).ToList();

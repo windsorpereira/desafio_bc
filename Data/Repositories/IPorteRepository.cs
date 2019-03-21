@@ -10,5 +10,6 @@ namespace Data.Repositories
     public interface IPorteRepository : IRepository<Porte, int>
     {
         IList<Porte> ObterTodos();
+        IList<Porte> ObterTodosSqlCommand();
     }
 }
