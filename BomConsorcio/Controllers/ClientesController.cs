@@ -42,7 +42,7 @@ namespace BomConsorcio.Controllers
         {
             try
             {
-                cliente.Cnpj = Regex.Replace(cliente.Cnpj, "[^0-9]", "");
+                cliente.Cnpj = !string.IsNullOrEmpty(cliente.Cnpj) ? Regex.Replace(cliente.Cnpj, "[^0-9]", "") : null;
 
                 ValidateModel(cliente);
 
