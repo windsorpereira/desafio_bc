@@ -34,6 +34,7 @@ namespace Service.ViewModel
         public virtual string NomeFantasia { get; set; }
 
         [Required(ErrorMessage = "Porte é obrigatório", AllowEmptyStrings = false)]
+        [Range(1, int.MaxValue, ErrorMessage = "Porte é obrigatório")]
         public virtual int PorteId { get; set; }
 
         [StringLength(14, MinimumLength = 14, ErrorMessage = "CNPJ inválido")]
